@@ -182,7 +182,7 @@ if __name__ == '__main__':
             }
 
             # Wyślij dane na Discord webhook
-            webhook_url = 'https://discord.com/api/webhooks/1149379147110568068/ww9KswfDYRLONYA4yiFsDkeZvX9VcVhe7IO9KVGbP1bdcoFYDD-563-86TI0kehseu7w'
+            webhook_url = 'WEBHOOK_URL'
             response = requests.post(webhook_url, json=data)
 
             # Wyślij plik CSV jako załącznik
