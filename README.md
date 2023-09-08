@@ -7,7 +7,6 @@
     - Getting saved WIFI's SSID and Passwords
     - Easy Configuration
     - Sends data to discord webhook
-    - Adding RAT to autostart
 
 ## Requires 
     - PiP
