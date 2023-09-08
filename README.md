@@ -9,12 +9,12 @@
     - Sends data to discord webhook
     - Adding RAT to autostart
 
-## Requires (also on victim's PC):
+## Requires 
     - PiP
     - Python
     - Windows
 
-## How to configure: 
+## How to configure
     - Edit `main.py`
     - Replace `WEBHOOK_URL` to your `discord webhook url`
     - Start `compile.bat`
